@@ -49,7 +49,7 @@ jobs:
       - run: mplayer -really-quiet -ao null -vo null -identify -frames 0 cypress/videos/*.mp4 || true
 
       - name: Chrome headless
-        uses: ./
+        uses: cypress-io/github-action@v1
         with:
           browser: chrome
           headless: true

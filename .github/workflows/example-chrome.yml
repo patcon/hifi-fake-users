@@ -15,17 +15,6 @@ jobs:
           # see https://on.cypress.io/command-line#cypress-info
           build: npx cypress info
 
-      - name: Electron
-        uses: cypress-io/github-action@v1
-
-      # store screenshot captured during the test
-      - uses: actions/upload-artifact@v1
-        with:
-          name: screenshots-in-electron
-          path: cypress/screenshots
-
-      - run: npx image-size cypress/screenshots/**/*.png
-
       - name: Chrome
         uses: cypress-io/github-action@v1
         with:

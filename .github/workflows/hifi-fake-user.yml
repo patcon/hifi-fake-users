@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CYPRESS_BASE_URL: https://map.highfidelity.com
-      HIFI_SPACE: ${{ github.event.client_payload }}
+      HIFI_SPACE: ${{ github.event.client_payload.hifi_space }}
+      HIFI_X_POS: ${{ github.event.client_payload.hifi_x_pos }}
+      HIFI_Y_POS: ${{ github.event.client_payload.hifi_y_pos }}
+      HIFI_ORIENTATION: ${{ github.event.client_payload.hifi_orientation }}
+      AUDIO_URL: ${{ github.event.client_payload.audio_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1

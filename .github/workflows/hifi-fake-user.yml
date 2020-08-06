@@ -14,6 +14,7 @@ jobs:
       HIFI_Y_POS: ${{ github.event.client_payload.hifi_y_pos }}
       HIFI_ORIENTATION: ${{ github.event.client_payload.hifi_orientation }}
       AUDIO_URL: ${{ github.event.client_payload.audio_url }}
+      MINUTES: ${{ github.event.client_payload.minutes }}
     steps:
       - if: ${{ github.event.client_payload.audio_url }}
         working-directory: /tmp

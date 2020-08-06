@@ -4,6 +4,7 @@ const config = {
   HIFI_X_POS: process.env.HIFI_X_POS || '38.63',
   HIFI_Y_POS: process.env.HIFI_Y_POS || '24.56',
   HIFI_ORIENTATION: process.env.HIFI_ORIENTATION || '4.71',
+  MINUTES: parseInt(process.env.MINUTES) || 1,
 }
 
 it('log into HiFi space as DJ', function() {
@@ -12,5 +13,5 @@ it('log into HiFi space as DJ', function() {
   cy.get('.allowScreen__askForPermissionButton *').first().click()
   cy.get('.chooseIOScreen__nextButton').click()
   cy.get('.profileScreen__readyButton').click()
-  cy.wait(20000)
+  cy.wait(config.MINUTES * 60 * 1000)
 })

@@ -19,7 +19,7 @@ jobs:
         working-directory: /tmp
         # We'll let ffmpeg recognize the format and not bother using file extension in intermediary.
         run: |
-           wget --content-disposition --trust-server-names $AUDIO_URL --output-file=downloaded-noext
+           wget --content-disposition --trust-server-names $AUDIO_URL --output-document=downloaded-noext
            # See: https://github.com/jrottenberg/ffmpeg#convert-a-local-gif-into-a-mp4
            docker run --volume $(pwd):$(pwd) --workdir $(pwd) jrottenberg/ffmpeg -i downloaded-noext output.wav
 

@@ -10,7 +10,8 @@ module.exports = on => {
 
       // See: https://github.com/cypress-io/cypress/issues/5592
       // Other flags already used be default.
-      launchOptions.args.push('--use-file-for-fake-audio-capture=cypress/fixtures/female.wav')
+      launchOptions.args.push('--use-file-for-fake-audio-capture=cypress/fixtures/voice-sample.wav')
+      launchOptions.args.push('--use-file-for-fake-video-capture=cypress/fixtures/beach-sample.mjpeg')
 
       console.log('chrome launch args:')
       console.log(launchOptions.args.join(os.EOL))

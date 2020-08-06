@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CYPRESS_BASE_URL: https://map.highfidelity.com
-      HIFI_SPACE: ${{ github.event.client_payload || '' }}
+      HIFI_SPACE: ${{ github.event.client_payload }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1

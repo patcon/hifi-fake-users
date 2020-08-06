@@ -1,0 +1,60 @@
+{
+  "id": "d21e511d-13ab-4858-9fae-7fbadc176397",
+  "version": "2.0",
+  "name": "fake-mic",
+  "url": "https://meet.jit.si",
+  "tests": [{
+    "id": "4d508397-4806-4c1c-83e2-d3efa46dfc5b",
+    "name": "visit",
+    "commands": [{
+      "id": "f3a470fe-553f-4c96-8781-686f107a98f2",
+      "comment": "",
+      "command": "open",
+      "target": "/cypress-audio-test#config.prejoinPageEnabled=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0d5e6a2-93c8-446e-9e4e-5536cb76ea26",
+      "comment": "",
+      "command": "pause",
+      "target": "10000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c1bf1c1-17b5-4dd6-8606-988d77fbc0c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.video-preview",
+      "targets": [
+        ["css=.video-preview .toolbox-icon", "css:finder"],
+        ["xpath=//div[@id='new-toolbox']/div[2]/div[2]/div[3]/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3615e5ae-de46-4b69-bdc1-dc6c443ddfcc",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "024d254f-89e9-4b7e-95aa-25c5629bbd8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.video-preview",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "328c5a8d-1549-4249-8ff5-39c9c37d6052",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4d508397-4806-4c1c-83e2-d3efa46dfc5b"]
+  }],
+  "urls": ["https://meet.jit.si/"],
+  "plugins": []
+}

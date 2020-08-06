@@ -1,0 +1,10 @@
+capabilities:
+  browserName: "chrome"
+  chromeOptions:
+    args:
+      - use-fake-ui-for-media-stream
+      - use-fake-device-for-media-stream
+      - disable-dev-shm-usage
+      - use-file-for-fake-audio-capture=/opt/media/audio1.wav
+      - use-file-for-fake-video-capture=/opt/media/video1.mjpeg
+server: "http://157.245.211.241:4444/wd/hub"

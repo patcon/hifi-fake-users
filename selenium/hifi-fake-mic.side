@@ -1,0 +1,67 @@
+{
+  "id": "d21e511d-13ab-4858-9fae-7fbadc176397",
+  "version": "2.0",
+  "name": "fake-mic2",
+  "url": "https://map.highfidelity.com",
+  "tests": [{
+    "id": "4d508397-4806-4c1c-83e2-d3efa46dfc5b",
+    "name": "visit",
+    "commands": [{
+      "id": "f3a470fe-553f-4c96-8781-686f107a98f2",
+      "comment": "",
+      "command": "open",
+      "target": "/DfFq8zih057Z3qe3/?x=38.63&y=24.56&o=4.71",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c1bf1c1-17b5-4dd6-8606-988d77fbc0c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.screen1__play",
+      "targets": [
+        ["css=.video-preview .toolbox-icon", "css:finder"],
+        ["xpath=//div[@id='new-toolbox']/div[2]/div[2]/div[3]/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5780f87-8429-48e0-89fc-04d24ff0096f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.allowScreen__askForPermissionButton *",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "024d254f-89e9-4b7e-95aa-25c5629bbd8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.chooseIOScreen__nextButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2aa7fae-4d03-44f4-8dd8-458faa5f39f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profileScreen__readyButton",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34d8cf6d-1902-46de-ba34-c8854d74506e",
+      "comment": "",
+      "command": "pause",
+      "target": "10000",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "328c5a8d-1549-4249-8ff5-39c9c37d6052",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4d508397-4806-4c1c-83e2-d3efa46dfc5b"]
+  }],
+  "urls": ["https://meet.jit.si/", "https://map.highfidelity.com/DfFq8zih057Z3qe3/", "https://map.highfidelity.com/"],
+  "plugins": []
+}

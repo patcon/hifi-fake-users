@@ -1,10 +1,15 @@
 name: "HiFi: Fake User"
-on: [push]
+on:
+  push:
+  repository_dispatch:
+    types:
+      - fake-user
 jobs:
   tests:
     runs-on: ubuntu-latest
     env:
       CYPRESS_BASE_URL: https://map.highfidelity.com
+      HIFI_SPACE: ${{ github.event.client_payload || '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1

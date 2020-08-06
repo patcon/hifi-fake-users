@@ -3,6 +3,8 @@ on: [push]
 jobs:
   tests:
     runs-on: ubuntu-latest
+    env:
+      CYPRESS_BASE_URL: https://map.highfidelity.com
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -36,21 +38,3 @@ jobs:
       # can tell us the resolution of a video file
       - run: ffprobe cypress/videos/*.mp4 || true
       - run: mplayer -really-quiet -ao null -vo null -identify -frames 0 cypress/videos/*.mp4 || true
-
-      - name: Chrome headless
-        uses: cypress-io/github-action@v1
-        with:
-          browser: chrome
-          headless: true
-
-      - uses: actions/upload-artifact@v1
-        with:
-          name: screenshots-in-headless-chrome
-          path: cypress/screenshots
-
-      - uses: actions/upload-artifact@v1
-        with:
-          name: video-in-headless-chrome
-          path: cypress/videos
-
-      - run: npx image-size cypress/screenshots/**/*.png

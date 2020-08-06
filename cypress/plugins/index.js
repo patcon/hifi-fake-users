@@ -9,8 +9,7 @@ module.exports = on => {
       launchOptions.args.push('--window-size=1920,1080')
 
       // See: https://github.com/cypress-io/cypress/issues/5592
-      launchOptions.args.push('--use-fake-device-for-media-stream')
-      launchOptions.args.push('--use-fake-ui-for-media-stream')
+      // Other flags already used be default.
       launchOptions.args.push('--use-file-for-fake-audio-capture=cypress/fixtures/female.wav')
 
       console.log('chrome launch args:')

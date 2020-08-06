@@ -15,6 +15,12 @@ jobs:
       HIFI_ORIENTATION: ${{ github.event.client_payload.hifi_orientation }}
       AUDIO_URL: ${{ github.event.client_payload.audio_url }}
     steps:
+      - if: ${{ github.event.client_payload.audio_url }}
+        working-directory: /tmp
+        run: |
+           wget --content-disposition --trust-server-names $AUDIO_URL
+           ffmpeg -i *.mp3 output.wav
+
       - name: Checkout
         uses: actions/checkout@v1
 

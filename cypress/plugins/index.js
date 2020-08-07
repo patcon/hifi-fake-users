@@ -1,6 +1,6 @@
 const os = require('os')
 
-const audioFile = process.env.AUDIO_URL ? '/tmp/output.wav' : 'cypress/fixtures/voice-sample.wav'
+const audioFile = process.env.AUDIO_URL ? '/tmp/output.wav' : 'cypress/fixtures/violin-sample.wav'
 
 module.exports = on => {
   on('before:browser:launch', (browser, launchOptions) => {

@@ -16,5 +16,6 @@ it('log into HiFi space as DJ', function() {
   cy.get('.allowScreen__askForPermissionButton *').first().click()
   cy.get('.chooseIOScreen__nextButton').click()
   cy.get('.profileScreen__readyButton').click()
-  cy.wait(config.MINUTES * 60 * 1000)
+  //cy.wait(config.MINUTES * 60 * 1000)
+  cy.wait(5 * 60 * 1000)
 })

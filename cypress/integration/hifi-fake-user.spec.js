@@ -1,9 +1,12 @@
-// patcon's space
 const config = {
+  // patcon's space
   HIFI_SPACE: process.env.HIFI_SPACE || 'DfFq8zih057Z3qe3',
+
+  // Position of stage in default map.
   HIFI_X_POS: process.env.HIFI_X_POS || '38.63',
   HIFI_Y_POS: process.env.HIFI_Y_POS || '24.56',
   HIFI_ORIENTATION: process.env.HIFI_ORIENTATION || '4.71',
+
   MINUTES: parseInt(process.env.MINUTES, 10) || 1,
 }
 

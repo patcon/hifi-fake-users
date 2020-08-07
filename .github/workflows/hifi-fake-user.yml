@@ -1,9 +1,13 @@
 name: "HiFi: Fake User"
 on:
   push:
+    paths-ignore:
+      - '**.md'
+  # See: https://docs.github.com/en/rest/reference/repos#create-a-repository-dispatch-event
   repository_dispatch:
     types:
       - fake-user
+
 jobs:
   create:
     runs-on: ubuntu-latest

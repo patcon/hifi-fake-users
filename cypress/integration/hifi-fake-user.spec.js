@@ -4,7 +4,7 @@ const config = {
   HIFI_X_POS: process.env.HIFI_X_POS || '38.63',
   HIFI_Y_POS: process.env.HIFI_Y_POS || '24.56',
   HIFI_ORIENTATION: process.env.HIFI_ORIENTATION || '4.71',
-  MINUTES: parseInt(process.env.MINUTES) || 1,
+  MINUTES: parseInt(process.env.MINUTES, 10) || 1,
 }
 
 it('log into HiFi space as DJ', function() {

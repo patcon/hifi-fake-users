@@ -7,7 +7,7 @@ const config = {
   HIFI_Y_POS: process.env.HIFI_Y_POS || '24.56',
   HIFI_ORIENTATION: process.env.HIFI_ORIENTATION || '4.71',
 
-  MINUTES: parseInt(process.env.MINUTES, 10) || 1,
+  MINUTES: process.env.MINUTES || '1',
 }
 
 it('log into HiFi space as DJ', function() {
@@ -17,6 +17,6 @@ it('log into HiFi space as DJ', function() {
   cy.get('.chooseIOScreen__nextButton').click()
   cy.get('.profileScreen__readyButton').click()
   cy.log(config.MINUTES)
-  cy.log(config.MINUTES * 60 * 1000)
-  cy.wait(config.MINUTES * 60 * 1000)
+  const msecWait = parseInt(config.MINUTES, 10) * 60 * 1000
+  cy.wait(msecWait)
 })

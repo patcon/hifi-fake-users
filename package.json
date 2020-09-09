@@ -4,6 +4,7 @@
   "description": "running Cypress using Chrome",
   "main": "index.js",
   "scripts": {
+    "fake-user": "cypress run --spec 'cypress/integration/hifi-fake-user.spec.js' --browser=chrome",
     "test": "cypress run",
     "info": "cypress info"
   },

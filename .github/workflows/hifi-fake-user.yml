@@ -20,13 +20,16 @@ jobs:
       AUDIO_URL: ${{ github.event.client_payload.audio_url }}
       MINUTES: ${{ github.event.client_payload.minutes }}
     steps:
+      - working-directory: cypress/fixtures
+        run: cp violin-sample.wav audio.wav
+
       - if: ${{ github.event.client_payload.audio_url }}
-        working-directory: /tmp
+        working-directory: cypress/fixtures
         # We'll let ffmpeg recognize the format and not bother using file extension in intermediary.
         run: |
            wget --content-disposition --trust-server-names $AUDIO_URL --output-document=downloaded-noext
            # See: https://github.com/jrottenberg/ffmpeg#convert-a-local-gif-into-a-mp4
-           docker run --volume $(pwd):$(pwd) --workdir $(pwd) jrottenberg/ffmpeg -i downloaded-noext output.wav
+           docker run --volume $(pwd):$(pwd) --workdir $(pwd) jrottenberg/ffmpeg -i downloaded-noext audio.wav
 
       - name: Checkout
         uses: actions/checkout@v1
